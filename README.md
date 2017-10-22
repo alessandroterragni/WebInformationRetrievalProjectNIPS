@@ -1,6 +1,8 @@
 # Web Information Retrieval Project NIPS
 
-Alessandro Terragni | Robin Esposito | Luis Galdo | Seara Juan González | Xin Ma Nazly | Santos Buitrago
+Alessandro Terragni | Robin Esposito | Luis Galdo | Seara Juan González | Xin Ma Nazly | Santos Buitrago  
+
+TU\e Eindhoven, Web Information Retrieval And Data Mining, Prof: Mykola Pechenizkiy
 
 ## Project idea
 The goal of this project is to develop an Information Retrieval (IR) system that supports basic functionality, including keyword search (based on Boolean and Vector Space retrieval), query by example search (finding docs similar to a chosen doc), parametric search (specify where to search for keywords and docs in which language).	
