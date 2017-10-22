@@ -1,0 +1,878 @@
+university_id;university_name
+0;A*STAR
+1;Aalto University
+2;Aalto Yliopisto
+3;Aarhus University
+4;AbbVie
+5;Academia Sinica
+6;Acadia University
+7;Adobe
+8;Advanced Telecommunications Research Institute International
+9;AgroParisTech
+10;AIST
+11;Aix-Marseille University
+13;Albert-Ludwigs-Universitaet Freiburg
+15;Allen Institute for Brain Science
+16;Amazon
+18;American Cancer Society
+19;American University
+20;American University of Beirut
+21;Ames laboratory
+22;Analog Devices
+23;ANUSANDHAN UNIVERSITY, BHUBANESWAR
+24;Apple
+26;Applied Materials
+27;Argonne National Laboratory
+28;Ariel University
+29;Arizona State University
+30;Asian Institute of Technology
+31;Aston University
+32;Athens University of Economics and Business
+33;ATR
+34;Auburn University
+35;Auckland
+36;Australian National University
+37;Austrian Research Institute for Artificial Intelligence
+38;BAE Systems
+39;Baidu
+41;Bar Ilan University
+42;Bar-Ilan University
+43;Baylor College of Medicine
+44;Baylor University
+45;BBN Technologies
+46;Beijing Computational Science Research Center
+47;Beijing University of Chemical Technology
+48;Beijing University of Technology
+49;Bell Labs
+50;Ben Gurion University
+54;Berkeley
+56;Berlin University of Technology
+57;Bernstein Center for Computational Neuroscience Berlin
+58;Bielefeld University
+59;Bilkent University
+60;Binghamton University
+61;Bloomberg
+63;Bocconi University
+64;Bogazici University, Istanbul
+65;Bonn Univ
+66;Boston University
+67;Bowdoin College
+68;Brandeis University
+69;Brigham Young University
+70;Brown
+71;Brown University
+73;Brunel University London
+74;Bruno Kessler Foundation
+75;Bryant University
+76;Cairo University
+77;California Institute of Technology
+78;California State University, Los Angeles
+79;California State University, Stanislaus
+80;Caltech
+81;CalTech
+82;Cambridge University
+83;Cardiff University
+84;Carl Zeiss
+85;Carleton University
+89;Carnegie Mellon University
+91;Case Western Reserve University
+92;CEA
+93;Cedars Sinai Medical Center
+95;Central South University
+96;Central South University, Changsha
+97;Centrum Wiskunde &  Informatica
+98;CERN
+99;Chalmers
+101;Chalmers University of Technology
+102;Champalimaud Neuroscience Programme
+103;Chapman University
+104;chinese academy of sciences
+105;Chinese University of Hong Kong
+106;Chongqing University
+107;Chubu University
+108;Cincinnati Children's Hospital Medical Center
+109;City College of New York
+110;City University London
+111;City University of Hong Kong
+112;Claremont McKenna College
+113;Clarkson University
+114;Clemson University
+115;CMU
+116;CNRS
+117;College of William and Mary
+118;Colorado School of Mines
+119;Colorado State University
+121;Columbia University
+122;CONICET
+126;Cornell University
+128;CQU
+129;CSHL
+130;CSIC
+131;CUHK
+132;CWI Amsterdam
+133;Czech Technical University in Prague
+134;Daimler AG
+135;Dalhousie University
+136;Dalian University of Technology
+138;Dartmouth College
+139;Deakin University
+140;Delft University of Technology
+141;Denison University
+142;DGIST
+143;Dickinson College
+144;Disney Research
+145;DKFZ
+146;Drexel University
+147;DSO National Laboratories
+149;Duke University
+151;Dunarea de Jos University of Galati
+152;Duquesne University
+153;Durban University of Technology
+154;Durham University
+155;Eastman Chemical
+156;Eberhard Karls Universität Tübingen
+157;Ecole Centrale Paris
+159;Ecole des Ponts ParisTech
+160;Ecole Normale Superieure
+161;Ecole Normale Supérieure de Lyon
+162;Ecole Normale Supérieure Paris
+166;Ecole Polytechnique Federale de Lausanne
+168;Ecole Polytechnique, Paris
+169;Edinburgh University
+170;Edmund Mach Foundation
+171;Eindhoven University of Technology
+172;Eli Lilly and Company
+173;Elon University
+174;EMBL
+175;EMBL-EBI
+176;Emory University
+177;ENS
+178;ENS Cachan
+179;ENS Lyon
+180;ENSAE
+181;ENSAE ParisTech
+182;EPFL
+183;EPFL, Lausanne
+184;ESSEC Business School
+187;ETH Zürich
+190;EURECOM
+191;ExxonMobil
+192;Facebook
+195;Flinders University
+196;Florida International University
+197;Florida State University
+198;Fondazione Bruno Kessler
+199;Ford Motor Company
+200;Fordham University
+201;FORTH
+202;Foscari University of Venice
+203;Franklin and Marshall College
+204;Fraunhofer HHI
+205;Fraunhofer Institute FOKUS
+206;Fraunhofer Institute for Computer Graphics Research IGD
+207;Fred Hutchinson Cancer Research Center
+208;Free University of Bozen-Bolzano
+209;Friedrich-Alexander-Universität Erlangen
+210;Friedrich-Schiller-University Jena
+211;Fritz-Haber-Institute of the Max-Planck
+212;Gatech
+213;Gebze Technical University
+214;Genentech Inc
+215;General Electric
+216;George Mason University
+217;George Washington University
+218;Georgetown University
+221;Georgia Institute of Technology
+222;Georgia State University
+223;Georgia Tech
+224;German Cancer Research Center
+225;Ghent University
+226;Goethe University, Frankfurt
+227;Google
+232;Graz University of Technology
+233;Griffith University
+234;Groningen University
+235;Harbin Institute of Technology
+236;Harvard
+237;Harvard College
+238;Harvard School of Public Health
+239;Harvard University
+241;Hebrew University of Jerusalem
+242;HEC Montréal
+243;Heidelberg University
+244;Heinrich-Heine-Universität Düsseldorf
+245;Helmholtz Zentrum München
+246;Hewlett-Packard
+247;HHMI
+248;HKU
+249;HKUST
+250;Hokkaido University
+251;Hong Kong Polytechnic University
+252;Hong Kong University of Science and Technology
+254;Howard Hughes Medical Institute
+255;Howard University
+256;HRL Laboratories
+257;Huawei Technologies
+259;Huazhong University of Science and Technology
+260;Humboldt University of Berlin
+261;IAP
+262;IBM
+263;Icahn School of Medicine at Mount Sinai
+264;ICF International
+265;Idaho National Laboratory
+266;Idiap
+267;Idiap Research Institute
+268;IDS
+269;IDSIA
+270;Idsia
+271;IIT
+272;IIT Bombay
+273;IIT Delhi
+274;IIT Gandhinagar
+275;IIT kharagpur
+276;IIT Madras
+277;Illinois Institute of Technology
+279;Imperial College London
+280;Indian Institute of Science
+281;Indian Institute of Science, Bangalore
+282;Indian Institute of Technology
+283;Indian Institute of Technology Bombay,  Mumbai
+284;Indian Institute of Technology Delhi
+285;Indian Institute of Technology Kanpur
+286;Indian Institute of Technology Madras
+288;Indian Institute of Technology, Kharagpur
+289;Indiana University
+291;Indiana University Bloomington
+292;Indiana University Purdue University Indianapolis
+293;INRA
+294;INRIA
+296;INSEAD
+297;INSERM
+298;Institut Pasteur
+299;Institute for Advanced Study
+300;Institute of Atmospheric Physics
+301;Institute of Automation
+302;Institute of Botany, Chinese  Academy of Sciences
+304;Institute of Computing Technology, Chinese Academy of Sciences
+306;Institute of geology and geophysics, Chinese Academy of Sciences
+307;Institute of Mathematics of the Romanian Academy
+308;Institute of Oceanology, Chinese Academy of Sciences
+309;Institute of Plasma Physics, Chinese Academy of Sciences
+310;Institute of Science and Technology Austria
+311;Institute of Software Chinese
+312;Institute of Statistical Mathematics
+313;Institute of Theoretical Physics, Chinese Academy of Sciences
+314;Instituto Superior Tecnico
+316;Intel
+318;International Institute of Information Technology
+319;Iowa State University
+320;IST Austria
+322;Istituto Italiano di Tecnologia, Genova
+323;IT University of Copenhagen
+324;Italian Institute of Technology
+326;itu
+327;IU
+328;IUPUI
+329;Jacobs University Bremen
+330;James Cook University
+331;Jean Monnet University
+332;Jiaotong University
+333;Johannes Kepler University Linz
+334;Johns Hopkins University
+335;KAIST
+336;Keele University
+337;Kennesaw State University
+338;Kent State University
+340;King Abdullah University of Science and Technology, Thuwal
+341;Kings College London
+342;Kochi University of Technology
+344;Korea Advanced Institute of Science and Technology
+345;Korea Institute for Advanced Study
+346;Korea Institute of Science and Technology
+347;KTH
+352;KU Leuven
+354;Kyoto University
+355;Kyushu University
+356;L3S Research Center
+357;Lancaster University
+358;Laureate Institute For Brain Research
+359;Laval University
+361;Lawrence Berkeley National Laboratory
+363;Lawrence Livermore National Laboratory
+364;Lehigh University
+365;Leibniz Universität Hannover
+366;Leiden University
+367;Leuphana Universität Lüneburg
+368;LIACS
+369;Lille 3 University
+370;Lincoln University
+371;Linkedin
+374;Linköping University
+375;LIP6
+376;London School of Economics
+377;London South Bank University
+378;Los Alamos National Laboratory
+379;Loughborough University
+380;Louisiana State University
+381;Loyola Marymount University
+382;Ludwig-Maximilians-Universität München
+383;Lund University
+384;Maastricht University
+385;Macau University of Science and Technology
+386;Macquarie University
+387;Mahidol University
+388;Marquette University
+389;Massachusetts Institute of Technology
+390;Max Planck Florida Institute for Neuroscience
+391;Max Planck Institute for Brain Research
+392;Max Planck Institute for Human Cognitive and Brain Sciences
+393;Max Planck Institute for Informatics
+394;Max Planck Institute for Intelligent Systems
+395;Max Planck Institute for Mathematics in the Sciences
+396;Max Planck Institute for the Structure and Dynamics of Matter
+398;McGill University
+399;McMaster University
+400;Medical College of Wisconsin
+401;Medical University of Innsbruck
+402;Medical University of South Carolina
+403;Medical University of Vienna
+404;Meiji University
+405;Memorial Sloan Kettering Cancer Center
+407;Memorial University
+408;MERL
+409;Michigan State University
+410;Microsoft
+413;Middlesex University
+414;Mind Research Network
+415;Mines ParisTech
+416;MIPT
+417;Mississippi State University
+418;Missouri University of Science and Technolgy
+419;MIT
+421;MITRE Corporation
+422;Mitsubishi Electric Research Laboratories
+424;Mitya'B. Chklovskii
+427;Monash University, Clayton
+428;Montana State University
+429;Montanuniversität Leoben
+430;Montclair State University
+431;Mount Royal University
+432;Mount Sinai School of Medicine
+433;MPI-SWS
+434;Nagoya University
+435;Nanjing Tech University
+436;Nanjing University
+438;Nanjing University of Science and Technology
+439;Nanyang Technological University
+440;Nanyang Technological University, Singapore
+441;Nara Institute of Science and Technology
+442;NASA
+443;National and Kapodistrian University of Athens
+444;National Chengchi University
+445;National Chung Cheng University
+446;National I-Lan University
+447;National ICT Australia
+448;National Institute of Advanced Industrial Science and Technology
+449;National Institute of Informatics
+450;National Institute of Standards and Technology
+451;National Institutes of Health
+452;National Renewable Energy Laboratory
+453;National Research Council
+454;National Research Council of Canada
+457;National Research University Higher School of Economics, Moscow
+458;National Taiwan University
+459;national technical university of athens
+460;National Tsing Hua University
+461;National University of Ireland Galway
+462;National University of Singapore
+464;NCSU
+465;NEC Laboratories America
+469;Netflix
+470;Netherlands Cancer Institute
+471;NEU
+472;New Jersey Institute of Technology
+473;New York University
+474;NICT
+475;NICTA
+476;NIH
+477;NITK Surathkal
+478;NJIT
+479;North Carolina State University
+480;North-West University, South Africa
+482;Northeastern University, Boston
+483;Northern Illinois University
+484;Northumbria University
+486;Northwestern University
+488;NTT Corporation
+489;NTU, Singapore
+490;NVIDIA
+491;NYU
+492;OFFIS
+493;Ohio State University
+494;Ohio State University at Lima
+495;Ohio University
+496;Olin College of Engineering
+497;Oregon State University
+498;Osaka University
+499;Otto-von-Guericke-University Magdeburg
+502;Oxford University
+503;Ozyegin University
+504;Pacific Northwest National Laboratory
+506;Palo Alto Research Center
+507;PARC
+508;Peking University
+511;Pennsylvania State University
+512;Perimeter Institute
+513;Philipps-University Marburg
+514;Pierre and Marie Curie University
+515;Pohang University of Science and Technology
+516;Politecnico di Milano
+517;Pomona College
+518;Pontificia Universidad Católica del Perú
+519;Portland State University
+520;POSTECH
+521;Poznan University of Technology
+522;Princeton University
+524;Purdue University
+525;Qualcomm Technologies, Inc
+526;Queen Mary University of London
+528;Queen's University
+529;Queen's University Belfast
+530;Queensland University of Technology
+532;Radboud University Nijmegen
+535;Rensselaer Polytechnic Institute
+536;Rice University
+537;RIKEN
+538;Robert Bosch GmbH
+539;Rochester Institute of Technology
+540;Rose-Hulman Institute of Technology
+541;Royal Holloway, University of London
+542;Royal Veterinary College
+543;Ruhr-Universität Bochum
+544;Ruprecht-Karls-Universität Heidelberg
+548;Rutgers University, New Brunswick
+550;RWTH Aachen University
+551;Saarland University
+552;Salk Institute
+553;Sam Houston State University
+554;San Diego State University
+555;San Francisco State University
+556;Santa Fe Institute
+557;Sapienza University of Rome
+558;SAS Institute
+560;Scripps Research Institute
+562;Seoul National University, Korea
+563;Shandong University
+564;Shanghai Jiao Tong University
+565;Shanghai University of Finance and Economics
+566;ShanghaiTech University
+567;Shantou University
+568;Sharif University of Technology
+569;Shenzhen University
+570;Shimane University
+572;Siemens Corporation
+573;Simon Fraser University
+575;Singapore Management University
+576;Singapore University of Technology and Design
+577;Skolkovo Institute of Science and Technology
+578;Southeast University
+579;Southern Illinois University
+580;SRI International
+581;St. John's University
+582;St. Jude Children's Research Hospital
+585;Stanford University
+589;State University of New York, Buffalo
+590;Stockholm University
+591;Stony Brook University
+592;Strathclyde University
+593;Sun Yat-sen University
+596;SUNY Buffalo
+598;Supélec
+599;Swinburne University of Technology
+600;Swiss Federal Institute of Technology
+601;Syracuse University
+602;Taiyuan University of Technology
+603;Tamagawa University
+604;Technical University Berlin
+605;Technical University Darmstadt
+606;Technical University of Crete
+607;Technical University of Denmark
+608;Technical University of Munich
+612;Technion Israel Institute of Technology
+613;Technische Universitaet Darmstadt
+615;Technische Universität Chemnitz
+617;Technische Universität Dresden
+618;Tel Aviv University
+620;Telecom ParisTech
+621;Telefonica Research
+622;Temple University
+624;Texas A&M University
+625;Texas Christian University
+626;Texas Tech University
+627;The College of New Jersey
+628;The Open University
+629;TNO
+630;Tokushima University
+631;Tokyo Institute of Technology
+632;Tokyo Metropolitan Institute of Medical Science
+633;Toyohashi University of Technology
+634;Toyota Technological Institute at Chicago
+635;Trinity College
+636;Trinity University
+637;Tsinghua University
+638;TTI Chicago
+642;TU Braunschweig
+644;TU Delft
+645;TU Dortmund
+648;TU Kaiserslautern
+650;TU Vienna
+651;TU Wien
+652;Tufts University
+653;Tulane University
+654;Twitter
+655;Télécom ParisTech
+657;Tübingen University
+658;U of Toronto
+659;U. Michigan
+660;U. Montreal
+661;U. of Illinois, Chicago
+662;U. of Southern California
+663;U.C. Berkeley
+664;UC Berkeley
+665;UC Davis
+666;UC Irvine
+667;UC Merced
+668;UC Riverside
+669;UC San Diego
+670;UC Santa Cruz
+671;UCF
+672;UChicago
+673;UCL
+674;UCLA
+675;UCSB
+676;UCSD
+677;UCSF
+678;UIC
+679;UIUC
+680;UKE
+681;ULB
+682;ULg
+683;Ulm University
+684;UMass Amherst
+685;UMBC
+686;UMD
+687;Umeå universitet
+688;UNC
+691;UNIST
+692;Univ of California San Diego
+693;Univ of Colorado
+694;Univ. of Florida
+695;Univ. of Illinois, Urbana-Champaign
+696;Univ. of New Mexico
+697;Univ. of Pennsylvania
+698;Univ. of Texas at Austin
+699;Univerity of Waterloo
+700;Universidad de Chile
+701;Universidad de Concepcion
+702;Universidad de la República
+703;Universidad de la República, Uruguay
+704;Universidad de los Andes
+705;Universidad de Zaragoza
+706;Universidad Oviedo
+707;Universidad Tecnica Federico Santa Maria
+708;Universidade de Aveiro
+709;Universitaet Potsdam
+710;Universitaet Siegen
+711;Universitat Autònoma de Barcelona
+712;Universitat Pompeu Fabra
+714;Universite de Montreal
+715;Universiti Sains Malaysia, Penang
+716;University at Albany
+717;University at Buffalo
+718;University Bremen
+719;University California San Diego
+720;University Carlos III de Madrid
+721;University College Cork
+722;University College Dublin
+723;University College London
+724;University Freiburg
+725;University Jean Monnet of Saint-Etienne
+726;University Kaiserslautern
+727;University Lille 1
+728;University of Aberdeen
+729;University of Adelaide
+730;University of Akron
+731;University of Alabama
+732;University of Alberta
+733;University of Algarve
+734;University of Amsterdam
+735;University of Arizona
+736;University of Arkansas
+737;University of Auckland
+738;University of Basel
+739;University of Bath
+740;University of Bayreuth
+741;University of Bern
+742;University of Bielefeld
+743;University of Birmingham
+744;University of Bonn
+745;University of Bordeaux
+746;University of Brasilia
+747;University of Bremen
+748;University of Bristol
+749;University of British Columbia
+750;University of Bucharest
+751;university of Caen
+752;University of Cagliari
+753;University of California
+754;University of California - Irvine
+755;University of California at Berkeley
+756;University of California at Los Angeles
+757;University of California at Merced
+758;University of California at Santa Barbara
+759;University of California Berkeley
+760;University of California in Irvine
+761;University of California Irvine
+762;University of California San Diego
+763;University of California San Francisco
+764;University of California Santa Barbara
+765;University of California Santa Cruz
+766;University of California, Berkeley
+767;University of California, Davis
+768;University of California, Irvine
+769;University of California, Los Angeles
+770;University of California, Merced
+771;University of California, Riverside
+772;University of California, San Diego
+773;University of California, San Francisco
+774;University of California, Santa Barbara
+775;University of California, Santa Cruz
+777;University of Cambridge
+778;University of Canberra
+779;University of Cantabria
+780;University of Canterbury
+781;University of Castilla-La Mancha
+782;University of Central Florida
+783;University of Central Lancashire
+784;University of Chicago
+785;University of Cincinnati
+786;University of Colorado
+790;University of Connecticut
+791;University of Copenhagen
+792;University of Cyprus
+793;University of Delaware
+794;University of East Anglia
+796;University of Edinburgh
+797;University of Electronic Science and Technology of China
+798;University of Essex
+799;University of Exeter
+800;University of Florence
+801;University of Florida
+802;University of Freiburg
+805;University of Genova
+806;University of Georgia
+807;University of Glasgow
+809;University of Guelph
+810;University of Haifa
+811;University of Hamburg
+812;University of Hawaii
+813;University of Heidelberg
+814;University of Helsinki
+815;University of Hong Kong
+816;University of Houston
+817;University of Hull
+818;University of Idaho
+819;University of IL
+821;University of Illinois
+831;University of Information Technology
+832;University of Ioannina
+833;University of Iowa
+834;University of Kansas
+835;University of Kentucky
+836;University of Lethbridge
+837;University of Leuven
+838;University of Lincoln
+839;University of Liverpool
+840;University of Liège
+842;University of Lugano
+843;University of Luxembourg
+844;University of Maastricht
+845;University of Manchester
+846;University of Manitoba
+847;University of Maryland
+851;University of Massachusetts
+856;University of Melbourne
+857;University of Memphis
+858;University of Miami
+859;University of Michigan
+860;University of Michigan Ann Arbor
+862;University of Minho
+863;University of Minnesota
+864;University of Minnesota Duluth
+865;University of Minnesota, Twin Cities
+866;University of Missouri, Columbia
+867;University of Montreal
+868;University of Nebraska at Kearney
+869;University of Nebraska at Omaha
+870;University of Nebraska-Lincoln
+871;University of Nevada, Las Vegas
+872;University of Nevada, Reno
+873;University of New Hampshire
+874;University of New Mexico
+875;University of New South Wales
+877;University of Newcastle
+878;University of Newcastle, Australia
+879;University of North Carolina
+882;University of North Texas
+883;University of Northumbria
+884;University of Notre Dame
+885;University of Nottingham
+886;University of Oklahoma
+887;University of Oldenburg
+888;University of Oregon
+889;University of Oslo
+890;University of Ottawa
+891;University of Oviedo
+892;University of Oxford
+894;University of Padova
+895;University of Passau
+896;University of Pennsylvania
+898;University of Pittsburgh
+899;University of Plymouth
+900;University of Potsdam
+901;University of Pécs
+902;University of Queensland
+903;University of Rochester
+904;University of Rome La Sapienza
+905;University of Saint-Etienne
+906;university of Salerno
+907;University of Salzburg
+908;University of San Francisco
+909;University of Science and Technology of China
+910;University of Sheffield
+911;University of South Australia
+912;University of South Carolina
+913;University of South Florida
+914;University of Southampton
+915;University of Southern California
+916;University of St Andrews
+917;University of Stirling
+918;University of Strathclyde
+919;University of Stuttgart
+920;University of Surrey
+921;University of Sussex
+922;University of Sydney
+923;University of São Paulo
+924;University of Tartu
+925;University of Technology Sydney
+926;University of Tennessee
+928;University of Texas at Arlington
+929;University of Texas at Austin
+930;University of Texas at Dallas
+931;University of Texas at San Antonio
+932;University of Texas Austin
+933;University of Texas Medical Branch
+934;University of Texas Medical School at Houston
+935;University of Texas, Arlington
+936;University of Texas, Austin
+938;University of Tokyo
+939;University of Toledo
+940;University of Toronto
+941;University of Toyama
+942;University of Trento
+943;University of Tromsø
+945;University of Tübingen
+946;University of Utah
+947;University of Vermont
+948;University of Verona
+949;University of Victoria
+950;University of Virginia
+951;University of Warwick
+952;University of Washington
+955;University of Waterloo
+956;University of Western Ontario
+957;University of Western Sydney
+958;University of Wisconsin
+964;University of Wroc?aw
+965;University of Wyoming
+966;University of York
+968;University of Zurich
+969;University Pierre et Marie Curie
+970;University Pompeu Fabra, Barcelona
+971;University Tübingen
+972;Università degli Studi di Foggia
+973;Università degli Studi di Genova
+974;Università degli Studi di Napoli Federico II
+975;Università degli Studi di Verona
+976;Università della Svizzera Italiana
+977;Università di Firenze
+979;Universität Bern
+980;Universität Bremen
+981;Universität des Saarlandes
+982;Université catholique de Louvain
+983;Université de Bretagne Sud
+984;Université de Lille
+985;Université de Liège
+986;Université de Montréal
+988;Université de Savoie
+989;Université de Sherbrooke
+990;Université Laval
+991;Université Libre de Bruxelles
+993;Université Paris 13
+994;Université Paris-Dauphine
+995;Université Paris-Sud
+996;Uniwersytet Miko?aja Kopernika
+997;Unnversity of Washington
+998;UNSW Australia
+999;UPenn
+1000;Uppsala University
+1001;Ural Federal University
+1002;USC
+1003;USDA Forest Service
+1004;USTC
+1005;UT Austin
+1006;UT Dallas
+1007;UT-Austin
+1008;Utah State University
+1009;UTC
+1010;UTFSM
+1011;UVSQ
+1012;UW
+1013;UW Madison
+1015;Vanderbilt University
+1016;Victoria University of Wellington
+1017;Vienna University of Technology
+1018;Virginia Tech
+1019;Vrije Universiteit Amsterdam
+1020;Vrije Universiteit Brussel
+1021;Wadsworth Center
+1022;Walmart Labs
+1023;Walter and Eliza Hall Institute of Medical Research
+1024;Warsaw University of Technology
+1025;Waseda University
+1026;Washington State University
+1027;Washington University
+1028;Washington University in Saint Louis
+1030;Weierstrass Institute for Applied Analysis and Stochastics
+1031;Weizmann Institute
+1034;Wesleyan University
+1035;West University of Timisoara
+1036;West Virginia University
+1037;WIAS Berlin
+1038;Wichita State University
+1039;William Paterson University
+1040;Worcester Polytechnic Institute
+1041;Wright State University
+1042;Wuhan Botanical Garden, Chinese Academy of Sciences
+1043;Xi'an Jiaotong Liverpool University
+1045;Xiamen University
+1046;Xidian University
+1050;Yahoo! Research
+1051;Yale University
+1053;Yonsei University
+1054;York University
+1055;Zhejiang University
+1056;École de technologie supérieure
+1057;École Normale Supérieure
+1058;École Polytechnique
+1059;École Polytechnique Fédérale de Lausanne
