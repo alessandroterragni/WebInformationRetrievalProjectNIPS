@@ -1,6 +1,6 @@
 # Web Information Retrieval Project NIPS
 
-Alessandro Terragni | Robin Esposito | Luis Galdo | Seara Juan González | Xin Ma Nazly | Santos Buitrago  
+Alessandro Terragni | Robin Esposito | Luis Galdo Seara | Juan González | Xin Ma | Nazly Santos Buitrago  
 
 TU\e Eindhoven, Web Information Retrieval And Data Mining, Prof: Mykola Pechenizkiy
 
@@ -25,7 +25,18 @@ Institutions and the topics of the papers that were written by authors belonging
 Also, the web page contains a page where a comparison between the two algorithms of topic extraction is performed.
 Some graphs related to topics, topics evolution and different topics of each author throughout the years are included in the web page.
 
+## FILES TO ADD TO THE REPOSITORY
 
+Some files were too big to upload on github. 
+You must download it from this link: https://drive.google.com/open?id=0B2M2nfKXpDMHZTM1NHZ2OFZpbTg
+
+Put these files in data/original
+- papers.csv        
+- papers.json    
+
+Put these files in data/generated/database    
+- database.sqlite
+ 
 
 
 
