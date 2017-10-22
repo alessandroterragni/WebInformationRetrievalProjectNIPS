@@ -2,11 +2,10 @@
 
 Alessandro Terragni | Robin Esposito | Luis Galdo | Seara Juan González | Xin Ma Nazly | Santos Buitrago
 
-## Introduction
-Project idea
+## Project idea
 The goal of this project is to develop an Information Retrieval (IR) system that supports basic functionality, including keyword search (based on Boolean and Vector Space retrieval), query by example search (finding docs similar to a chosen doc), parametric search (specify where to search for keywords and docs in which language).	
 
-## Data
+### Data
 The data used for this project are the papers presented in NIPS conferences from 1987 until 2016. Data was extracted from Kaggle: https://www.kaggle.com/benhamner/nips%E2%80%90papers .
 Also, other data from the authors such as H-index from Microsoft Academic and Google Scholar was crawled. Also, information regarding the institution to where the authors belong to was crawled from Google Scholar.
 
