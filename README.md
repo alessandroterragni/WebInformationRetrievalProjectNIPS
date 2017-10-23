@@ -35,7 +35,7 @@ Put these files in data/generated/database
  
 Put these files in the website folder:
 - database.sqlite
-- index
+- index folder
 
 
 
