@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Institute</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<!--Main styles-->
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--Adaptive styles-->
+<link rel="stylesheet" type="text/css" href="../css/adaptive.css">
+<!--Swipe menu-->
+<link rel="stylesheet" type="text/css" href="../css/pushy.css">
+<!--fonts-->
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<!--animation css-->
+<link rel="stylesheet" type="text/css" href="../css/animate.css">
+<!-- Slider Revolution -->
+<link rel="stylesheet" type="text/css" href="../rs-plugin/css/settings.css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="inner_page innerpage">
+<div class="bg_parallax" id="inb">
+
+
+<div class="site-overlay"></div>
+<div id="container">
+<!--header-->
+<div class="container-fluid header inner_head">
+<div class="fixed_w">
+<div class="row">
+<div class="col-md-12"><a href="/" class="logo"><img src="../img/logoin.png" alt="Mycity"/></a>
+<a href="/" class="green_btn_header" id="ad">Back</a></div>
+</div>
+</div>
+</div>
+<div class="container page_info">
+<div class="col_md_12">
+<h1>{{ institution['name'] }}</h1>
+<p class="lead">Most frequent topic: <a href="/topic/{{ institution['topic']['id'] }}">{{ institution['topic']['name'] }}</a></p>
+</div>
+</div>
+<div class="container contant">
+<div class="row cont">
+<!-- Left column-->
+<div class="col-md-3 mobile_none sidebar">
+<div class="affix-top" id="myAffix" data-spy="affix" data-offset-top="30" data-offset-bottom="20">
+<div class="tag">
+<h3>Related Institutions:</h3>
+</div>
+<ul class="places_cat">
+{% if institution['related']|length > 0 %}
+{% for inst in institution['related'] %}
+{% if inst['pos'] < 10 %}
+<li><a href="/institution/{{ inst['id'] }}" class="shop" style="color:#FFFFFF;">{{ inst['name'] }}</a></li>
+{% endif %}
+{% endfor %}
+{% endif %}
+</ul>
+
+</div>
+</div>
+<!--content-->
+<div class="col-md-9 basic">
+<div class="place_gr_cont">
+{% if institution['authors']|length > 0 %}
+{% for author in institution['authors'] %}
+
+{% if author['pos']%8 == 0 %}
+<!--place style one-->
+<div class="pg style_one">
+<div class="p_cont">
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+<img src="../img/pl3.jpg" alt="">
+<div class="dar_bg_frid"></div>
+</div>
+{% endif %}
+{% if author['pos']%8 == 1 %}
+<!--place style one-->
+<div class="pg style_one">
+<div class="p_cont">
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+<img src="../img/pl2.jpg" alt="">
+<div class="dar_bg_frid"></div>
+</div>
+{% endif %}
+{% if author['pos']%8 == 2 %}
+<!--place style one-->
+<div class="pg style_one" onclick="location.href='/author/{{ author['id'] }}';">
+<div class="p_cont">
+<h2>{{  author['name'] }}<span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+<img src="../img/pl1.jpg" alt="">
+<div class="dar_bg_frid"></div>
+</div>
+{% endif %}
+{% if author['pos']%8 == 3 %}
+<!--place style two-->
+<div class="pg style_two" >
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+{% if author['pos']%8 == 4 %}
+<!--place style two-->
+<div class="pg style_two">
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+{% if author['pos']%8 == 5 %}
+<!--place style three-->
+<div class="pg style_three" >
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+{% if author['pos']%8 == 6 %}
+<!--place style one-->
+<div class="pg style_one">
+<div class="p_cont">
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+<img src="../img/pl3.jpg" alt="">
+<div class="dar_bg_frid"></div>
+</div>
+{% endif %}
+{% if author['pos']%8 == 7 %}
+<!--place style one-->
+<div class="pg style_one" >
+<div class="p_cont">
+<h2><a href="/author/{{ author['id'] }}">{{ author['name'] }}</a><span></span></h2>
+{% for paper in author['papers'] %}
+{% if paper['pos'] < 3 %}
+<p>
+<a href="/paper/{{ paper['id'] }}" >**{{paper['title']}}</a>
+({{paper['year']}})
+<a href="/topic/{{ paper['topicid'] }}" >{{paper['topicname']}}</a>
+</p>
+{% endif %}
+{% endfor %}
+</div>
+<img src="../img/pl2.jpg" alt="">
+<div class="dar_bg_frid"></div>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--
+#################################
+- SCRIPT FILES -
+#################################
+-->
+<!--Google maps API linl-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!--scroll animate block-->
+<script src="../js/wow.min.js"></script>
+<!--Other main scripts-->
+<script src="../js/all_scr.js"></script>
+<!--Bootstrap js-->  
+<script src="../js/bootstrap.min.js"></script>
+<!--Map js-->
+<script type="text/javascript" src="../js/map_visits.js"></script>
+<script type="text/javascript" src="../js/infobox.js"></script>
+<!--Slider Revolution-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!--Parallax-->
+<script type="text/javascript" src="../js/jquery.parallax-0.2-min.js"></script>
+
+
+<script type="text/javascript">
+   "use strict";
+$('#myAffix').affix({
+offset: {
+top: 300,
+bottom: function () {
+return (this.bottom = $('.footer').outerHeight(true))
+}
+}
+})
+</script>
+<script type="text/javascript">
+   "use strict";
+$('#inb').parallax({
+'elements': [
+{
+'selector': '#inb',
+'properties': {
+'x': {
+'background-position-x': {
+'initial': 0,
+'multiplier': 0.03,
+'invert': true
+}
+},
+'y': {
+'background-position-y': {
+'initial': 30,
+'multiplier': 0.03,
+'invert': true
+}
+}
+}
+}
+]
+});
+</script>
+</body>
+</html>

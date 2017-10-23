@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore NIPS Paper</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <!--Main styles-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--Adaptive styles-->
+  <link rel="stylesheet" type="text/css" href="css/adaptive.css">
+  <!--Swipe menu-->
+  <link rel="stylesheet" type="text/css" href="css/pushy.css">
+  <!--fonts-->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <!--animation css-->
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <!-- Slider Revolution -->
+  <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body onload="initialize()" class="promo">
+
+  <!-- Site Overlay -->
+  <div class="site-overlay"></div>
+  <div id="container">
+    <div class="top_promo_block" id="promo_head">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+			<div class="input-group-btn btn_promo_search">
+				<div class="header_promo">
+					<img src="img/start/logo.png" alt="#">
+					<a href="{{ url_for('info') }}" class="log_btn " style="margin-left:10px;" >General Info</a>
+					<a href="{{ url_for('topicAnalysis') }}" class="log_btn " style="margin-right:10px;">Topic Analysis</a>
+				</div>			
+			</div>
+          </div>
+        </div>
+      </div>
+      <div class="start_descrition">
+        <h1>Explore NIPS Dataset<span></span></h1>
+        <span>Search engine for NIPS papers as well as further powerful analysis</span>
+        <div class="search_promo">
+          <div class="input-group">
+            <input id="queryid" type="text" class="form-control" aria-label="..." onChange="updateQuery(this.value)">
+            <div class="input-group-btn btn_cat">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span><i class="fa fa-book"></i>Paper:Whoosh<span class="caret"></span></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right place_dd" role="menu">
+                <li><a href="#" rel="1" class="book"><i class="fa fa-book"></i>Paper:Whoosh</a></li>
+                <li><a href="#" rel="2" class="male"><i class="fa fa-male"></i>Author:Whoosh</a></li>
+				<li><a href="#" rel="3" class="book"><i class="fa fa-book"></i>Paper:Lucene</a></li>
+                <li><a href="#" rel="4" class="male"><i class="fa fa-male"></i>Author:Lucene</a></li>
+              </ul>
+            </div>
+            <div class="input-group-btn btn_promo_search">
+			  <form id="queryForm" action="{{ url_for('resultPapers') }}" method="post">
+				<button type="submit" class="btn btn-success">
+					Search
+				</button>
+				<input id="method" name="method" value="whoosh" type="hidden">
+				<input id="authorids" name="author" value="" type="hidden">
+				<input id="topicids" name="topic" value="" type="hidden">
+				<input id="yearids" name="year" value="" type="hidden">
+				<input  id="queryids"  name="query" value="" type="hidden"/>
+				<input  id="nameids"  name="name" value="" type="hidden"/>
+				<input  id="institutionids"  name="institution" value="" type="hidden"/>
+				<input  id="QMethodids"  name="QMethod" value="boolean" type="hidden"/>
+				<input  id="mixids"  name="mixMethod" value="" type="hidden"/>
+				<input  id="fromids"  name="from" value="" type="hidden"/>
+				<input  id="toids"  name="to" value="" type="hidden"/>
+			  </form>
+            </div>
+			
+          </div>
+		<div></div>
+				<form class="place_form login_form">
+				<!-- lucene paper-->
+				<label id="QueryMethodLabel" class="qParams" style="display:none;"><font color="white">Query Method:</font>
+				<select id="QueryMethod" name="querymethod">
+					<option value="boolean">boolean</option>
+					<option value="VSR">VSR</option>
+					<option value="fuzzy">fuzzy</option>
+				</select>
+				</label>
+				<label id="FromLabel" class="qParams" style="display:none;"><font color="white">From:</font><input id="From" type="text"></label>
+				<label id="ToLabel" class="qParams" style="display:none;"><font color="white">To:</font><input id="To" type="text"></label>
+				<!-- lucene author-->
+				<label id="FilterLabel" class="qParams" style="display:none;"><font color="white">Filter:</font>
+				<select id="Filter" name="filter">
+					<option value="and">and</option>
+					<option value="or">or</option>
+				</select>
+				</label>
+		
+				<!-- whoosh author-->
+				<label id="InstitutionLabel" class="qParams" style="display:none;"><font color="white">Institution:</font><input id="Institution" type="text"></label>
+				<!-- whoosh paper-->
+				<label id="YearLabel" class="qParams" ><font color="white">Year:</font>
+				<select id="Year" name="year">
+					<option value="All the years">All the years</option>
+					{% for year in years %}
+					<option value="{{ year }}">{{ year }}</option>            
+					{% endfor %}
+				</select>
+				</label>
+				<label id="AuthorLabel" class="qParams" ><font color="white">Author:</font><input id="Author"  type="text"></label>
+		
+				<label id="TopicLabel" class="qParams" ><font color="white">Topic:</font>
+				<select id="Topic" name="topic">
+					<option value="All the topics">All the topics</option>
+					{% for topic in topics %}
+					<option value="{{ topic }}">{{ topic }}</option>            
+					{% endfor %}
+				</select>
+				</label>
+				</form>
+
+		</div>
+		
+      </div>
+    </div>
+
+<!--
+#################################
+- SCRIPT FILES -
+#################################
+-->
+<!--Google maps API linl-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!--scroll animate block-->
+<script src="js/wow.min.js"></script>
+<!--Other main scripts-->
+<script src="js/all_scr.js"></script>
+<!--Bootstrap js-->  
+<script src="js/bootstrap.min.js"></script>
+<!--Map js-->
+<script type="text/javascript" src="js/map_index.js"></script>
+<script type="text/javascript" src="js/infobox.js"></script>
+<!--Slider Revolution-->
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!--Parallax-->
+<script type="text/javascript" src="js/jquery.parallax-0.2-min.js"></script>
+
+<!--scroll animation-->
+<script>
+new WOW().init();
+</script>
+
+<!--Slider revolution settings-->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+   "use strict";
+  jQuery('.tp-banner').show().revolution(
+  {
+    dottedOverlay:"none",
+    delay:16000,
+    startwidth:1170,
+    startheight:700,
+    hideThumbs:200,
+    thumbWidth:100,
+    thumbHeight:50,
+    thumbAmount:5,
+    navigationType:"bullet",
+    navigationArrows:"solo",
+    navigationStyle:"preview4",
+    touchenabled:"on",
+    onHoverStop:"on",
+    swipe_velocity: 0.7,
+    swipe_min_touches: 1,
+    swipe_max_touches: 1,
+    drag_block_vertical: false,
+    parallax:"scroll",
+    parallaxBgFreeze:"on",
+    parallaxLevels:[10,7,4,3,2,5,4,3,2,1],
+    keyboardNavigation:"off",
+    navigationHAlign:"center",
+    navigationVAlign:"bottom",
+    navigationHOffset:0,
+    navigationVOffset:20,
+    soloArrowLeftHalign:"left",
+    soloArrowLeftValign:"center",
+    soloArrowLeftHOffset:20,
+    soloArrowLeftVOffset:0,
+    soloArrowRightHalign:"right",
+    soloArrowRightValign:"center",
+    soloArrowRightHOffset:20,
+    soloArrowRightVOffset:0,
+    shadow:0,
+    fullWidth:"on",
+    fullScreen:"off",
+    spinner:"spinner4",
+    stopLoop:"off",
+    stopAfterLoops:-1,
+    stopAtSlide:-1,
+    shuffle:"off",
+    autoHeight:"off",           
+    forceFullWidth:"off",           
+    hideThumbsOnMobile:"off",
+    hideNavDelayOnMobile:1500,            
+    hideBulletsOnMobile:"off",
+    hideArrowsOnMobile:"off",
+    hideThumbsUnderResolution:0,
+    hideSliderAtLimit:0,
+    hideCaptionAtLimit:0,
+    hideAllCaptionAtLilmit:0,
+    startWithSlide:0,
+    videoJsPath:"rs-plugin/videojs/",
+    fullScreenOffsetContainer: "" 
+  });
+}); //ready
+</script>
+
+<!--Parallax house-->
+<script type="text/javascript">
+   "use strict";
+$('.categori_block').parallax({
+
+  'elements': [
+  {
+    'selector': '.categori_block',
+    'properties': {
+      'x': {
+        'background-position-x': {
+          'initial': 0,
+          'multiplier': 0.1,
+          'invert': true
+        }
+      },
+      'y': {
+        'background-position-y': {
+          'initial': -780,
+          'multiplier': 0.1,
+          'invert': true
+        }
+      }
+    }
+  }
+  ]
+});
+</script>
+
+<script type="text/javascript">
+ "use strict";
+setHeiHeight(); 
+$(window).resize( setHeiHeight ); 
+</script>
+<script type="text/javascript">
+$("#container button span").click(function(){ 
+  var ul = $("#container ul"); 
+  if(ul.css("display")=="none"){ 
+    ul.slideDown("fast"); 
+  }else{ 
+    ul.slideUp("fast"); 
+  } 
+});
+
+$("#container ul li a").click(function(){ 
+  var txt = $(this).html();
+  var x = document.getElementsByClassName("qParams");
+  var i;
+  for (i = 0; i < x.length; i++) {
+	x[i].style.display = "none";
+	}
+	document.getElementById("QueryMethod").setAttribute("value", "boolean");
+	document.getElementById("From").setAttribute("value", "1987");
+	document.getElementById("To").setAttribute("value", "2016");
+	document.getElementById("Filter").setAttribute("value", "and");
+	document.getElementById("Year").setAttribute("value", "All the years");
+	document.getElementById("Author").setAttribute("value", "");
+	document.getElementById("Topic").setAttribute("value", "All the topics");
+	document.getElementById("Institution").setAttribute("value", "");
+	document.getElementById("QMethodids").setAttribute("value", "boolean");
+	document.getElementById("fromids").setAttribute("value", "1987");
+	document.getElementById("toids").setAttribute("value", "2016");
+	document.getElementById("mixids").setAttribute("value", "");
+	document.getElementById("yearids").setAttribute("value", "All the years");
+	document.getElementById("authorids").setAttribute("value", "");
+	document.getElementById("topicids").setAttribute("value", "All the topics");
+	document.getElementById("institutionids").setAttribute("value", "");
+	
+  if($(this).text()=='Paper:Whoosh')
+  {
+	document.getElementById("method").setAttribute("value", "whoosh");
+	document.getElementById("queryForm").setAttribute("action", "{{ url_for('resultPapers') }}");
+	document.getElementById("YearLabel").style.display= "inline-block";
+	document.getElementById("AuthorLabel").style.display= "inline-block";
+	document.getElementById("TopicLabel").style.display= "inline-block";
+  }
+  else if($(this).text()=='Author:Whoosh')
+  {
+	document.getElementById("method").setAttribute("value", "whoosh");
+	document.getElementById("queryForm").setAttribute("action", "{{ url_for('resultAuthors') }}");
+	document.getElementById("InstitutionLabel").style.display= "inline-block";
+	document.getElementById("TopicLabel").style.display= "inline-block";
+  }
+  else if($(this).text()=='Paper:Lucene')
+  {
+	document.getElementById("method").setAttribute("value", "lucene");
+	document.getElementById("queryForm").setAttribute("action", "{{ url_for('resultPapers') }}");
+	document.getElementById("FromLabel").style.display= "inline-block";
+	document.getElementById("ToLabel").style.display= "inline-block";
+	document.getElementById("AuthorLabel").style.display= "inline-block";
+	document.getElementById("TopicLabel").style.display= "inline-block";
+	document.getElementById("QueryMethodLabel").style.display= "inline-block";
+	document.getElementById("FilterLabel").style.display= "inline-block";
+	document.getElementById("queryid").setAttribute("placeholder","or=machine must=learning no=image");
+  }
+  else
+  {
+	document.getElementById("method").setAttribute("value", "lucene");
+	document.getElementById("queryForm").setAttribute("action", "{{ url_for('resultAuthors') }}");
+	document.getElementById("InstitutionLabel").style.display= "inline-block";
+	document.getElementById("TopicLabel").style.display= "inline-block";
+	document.getElementById("FilterLabel").style.display= "inline-block";
+  }
+  $("#container button span").html(txt); 
+  $("#container ul").hide(); 
+});
+
+
+
+function updateQuery(val)
+{
+    $("#queryid").val(val);
+    $("#queryid").trigger('change');
+}
+
+$("#queryid").change(function(){
+    
+    var price = String($(this).val());
+    $("#queryids").val(price);
+});
+
+$("#Year").change(function(){
+    
+    var txt = String($(this).val());
+    $("#yearids").val(txt);
+});
+
+$("#Topic").change(function(){
+    
+    var txt = String($(this).val());
+    $("#topicids").val(txt);
+});
+
+$("#QueryMethod").change(function(){
+    
+    var txt = String($(this).val());
+	if(txt=="boolean")
+		document.getElementById("queryid").setAttribute("placeholder","or=machine must=learning no=image");
+	else
+		document.getElementById("queryid").setAttribute("placeholder","");
+    $("#QMethodids").val(txt);
+});
+
+$("#Filter").change(function(){
+    
+    var txt = String($(this).val());
+    $("#mixids").val(txt);
+});
+
+$("#From").change(function(){
+    
+    var txt = String($(this).val());
+    $("#fromids").val(txt);
+});
+
+$("#To").change(function(){
+    
+    var txt = String($(this).val());
+    $("#toids").val(txt);
+});
+
+$("#Author").change(function(){
+    
+    var txt = String($(this).val());
+    $("#authorids").val(txt);
+});
+
+$("#Institution").change(function(){
+    
+    var txt = String($(this).val());
+    $("#institutionids").val(txt);
+});
+$('#queryid').keypress(function (e) {
+  if (e.which == 13) {
+    $('#btn btn-success').click();
+  }
+});
+</script>
+
+</body>
+</html>

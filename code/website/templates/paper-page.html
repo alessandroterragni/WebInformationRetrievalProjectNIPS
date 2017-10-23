@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paper</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<!--Main styles-->
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--Adaptive styles-->
+<link rel="stylesheet" type="text/css" href="../css/adaptive.css">
+<!--Swipe menu-->
+<link rel="stylesheet" type="text/css" href="../css/pushy.css">
+<!--fonts-->
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<!--animation css-->
+<link rel="stylesheet" type="text/css" href="../css/animate.css">
+<!-- Slider Revolution -->
+<link rel="stylesheet" type="text/css" href="../rs-plugin/css/settings.css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="inner_page innerpage">
+<div class="bg_parallax" id="inb">
+<!--navigation swipe-->
+<nav class="pushy pushy-left">
+<div class="profile">
+<div class="avatar"><img src="img/avatar/ava_16.jpg" alt="#"><span>5</span></div>
+<h3><a href="03.html">Ananew Matvey</a></h3>
+<a href="#" class="log_btn">Log in</a>
+</div>
+<ul class="side_menu">
+<li><a href="index.html"><i class="fa fa-bookmark-o"></i>Promo page</a></li>
+<li><a href="01.html" class="animsition-link"><i class="fa fa-map-marker"></i>Map</a></li>
+<li><a href="05.html"><i class="fa fa-list"></i>Place list</a></li>
+<li><a href="04.html"><i class="fa fa-th"></i>Place grid</a></li>
+<li><a href="02.html"><i class="fa fa-building-o"></i>Place</a></li>
+<li><a href="03.html"><i class="fa fa-user"></i>User profile</a></li>
+<li><a href="06.html"><i class="fa fa-book"></i>Blog</a></li>
+<li><a href="07.html"><i class="fa fa-file-powerpoint-o"></i>Open post</a></li>
+</ul>
+</nav>
+
+
+
+<!--autorization-->
+<div class="add_place none" id="autorized">
+<div class="place_form login_form">
+<i class="fa fa-times close_window" id="closeau"></i>
+<h3>Autorization<span></span></h3>
+<form>
+<label>Login:<input type="text"></label>
+<label>Password:<input type="text"></label>
+<a href="#" class="btn btn-success">Log in</a>
+<a href="#" class="btn btn-primary"><i class="icon-facebook"></i>Log in with Facebook</a>
+</form>
+</div>
+</div>
+<div class="site-overlay"></div>
+<div id="container">
+<!--header-->
+<div class="container-fluid header inner_head">
+<div class="fixed_w">
+<div class="row">
+<div class="col-md-12"><a href="/" class="logo"><img src="../img/logoin.png" alt="CIMICS"/></a>
+<a href="/" class="green_btn_header" id="ad">Back</a></div>
+</div>
+</div>
+</div>
+<div class="container page_info">
+<div class="col_md_12">
+<h1>{{ paper['title'] }}</h1>
+<h2>{{ paper['year'] }}</h2>
+<!--Blog category-->
+<ul class="blog_cat">
+<li><span>Author:</span></li>
+{% for author in paper['authors'] %}
+<li><a class="active" href="/author/{{ author['id'] }}">{{ author['name'] }} {% if author['institution_name'] %} ({{ author['institution']}}){% endif %}</a></li>
+{% endfor %}
+</ul>
+
+<ul class="blog_cat">
+<li><span>Topic:</span></li>
+<li><a href="/topic/{{ paper['topic_id'] }}">{{ paper['topic_name'] }}</a></li>
+</ul>
+</div>
+</div>
+<div class="container contant">
+<div class="row">
+
+<!--content-->
+<div class="col-md-12 basic">
+<div class="place_li_cont">
+<!--headlines-->
+<!--Blog post style one-->
+<div class="post p_style_one open">
+<div class="open post_info">
+<h1>{{ paper['title'] }}<span></span></h1>
+</div>
+</div>
+<div class="post_content">
+	</br>
+	<p>{{ paper['paper_text'] | safe }}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--
+#################################
+- SCRIPT FILES -
+#################################
+-->
+<!--Google maps API linl-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!--scroll animate block-->
+<script src="../js/wow.min.js"></script>
+<!--Other main scripts-->
+<script src="../js/all_scr.js"></script>
+<!--Bootstrap js-->  
+<script src="../js/bootstrap.min.js"></script>
+<!--Map js-->
+<script type="text/javascript" src="../js/map_visits.js"></script>
+<script type="text/javascript" src="../js/infobox.js"></script>
+<!--Slider Revolution-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!--Parallax-->
+<script type="text/javascript" src="../js/jquery.parallax-0.2-min.js"></script>
+
+<script type="text/javascript">
+   "use strict";
+$('#inb').parallax({
+'elements': [
+{
+'selector': '#inb',
+'properties': {
+'x': {
+'background-position-x': {
+'initial': 0,
+'multiplier': 0.03,
+'invert': true
+}
+},
+'y': {
+'background-position-y': {
+'initial': 30,
+'multiplier': 0.03,
+'invert': true
+}
+}
+}
+}
+]
+});
+</script>
+</body>
+</html>

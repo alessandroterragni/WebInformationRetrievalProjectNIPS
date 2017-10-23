@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Author</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<!--Main styles-->
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--Adaptive styles-->
+<link rel="stylesheet" type="text/css" href="../css/adaptive.css">
+<!--Swipe menu-->
+<link rel="stylesheet" type="text/css" href="../css/pushy.css">
+<!--fonts-->
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+<!--animation css-->
+<link rel="stylesheet" type="text/css" href="../css/animate.css">
+<!-- Slider Revolution -->
+<link rel="stylesheet" type="text/css" href="../rs-plugin/css/settings.css" media="screen" />
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body onload="initialize()" class="inner_page innerpage">
+
+<div class="site-overlay"></div>
+<div id="container">
+<!--header-->
+<div class="container-fluid header inner_head">
+<div class="fixed_w">
+<div class="row">
+<div class="col-md-12"><a href="/" class="logo"><img src="../img/logoin.png" alt="CIMICS"/></a>
+<a href="/" class="green_btn_header" id="ad">Back</a></div>
+</div>
+</div>
+</div>
+<div class="container page_info">
+<div class="col_md_12">
+<img src="../img/c_logo.jpg" alt="">
+<h1>{{ author['name'] }}</h1>
+{% if author['institution_name'] %}<ul><li><a href="/institution/{{ author['institution_id'] }}">{{ author['institution_name']}}</a></li></ul>{% endif %}
+
+</div>
+</div>
+<div class="container contant">
+<div class="row cont">
+<!-- Left column-->
+<div class="col-md-3 mobile_none sidebar">
+<div>
+<!--map place point-->
+
+<!--Similar Place-->
+<div class="similar">
+{% if author['related_collaboration']|length > 0 %}
+<h3>Frequent collaborators:</h3>
+{% for auth in author['related_collaboration'] %}
+<div>
+<img src="../img/avatar/ava_11.jpg" alt="#">
+<a href="/author/{{ auth['id'] }}">{{ auth['name'] }}</a>
+{% if auth['institution_name'] %} from <a href="/institution/{{ auth['institution_id'] }}">{{ auth['institution_name']}}</a>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if author['related_topic']|length > 0 %}
+<h3>Authors that worked on similiar topics:</h3>
+{% for auth in author['related_topic'] %}
+<div>
+<img src="../img/avatar/ava_11.jpg" alt="#">
+<a href="/author/{{ auth['id'] }}">{{ auth['name'] }}</a>
+{% if auth['institution_name'] %} from <a href="/institution/{{ auth['institution_id'] }}">{{ auth['institution_name']}}</a>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+{% if author['related_text']|length > 0 %}
+<h3>Authors that wrote similiar papers:</h3>
+{% for auth in author['related_text'] %}
+<div>
+<img src="../img/avatar/ava_11.jpg" alt="#">
+<a href="/author/{{ auth['id'] }}">{{ auth['name'] }}</a>
+{% if auth['institution_name'] %} from <a href="/institution/{{ auth['institution_id'] }}">{{ auth['institution_name']}}</a>{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+</div>
+</div>
+</div>
+<!--content-->
+<div class="col-md-9 basic">
+<!--Header section-->
+
+<!--Features info-->
+
+<div class="phone_email">
+<h3>Author Influence</h3>
+<div>
+<ul>
+{% if author['google_hindex']!=0 %}<li>H-index retrieved from Google Scholar: <b>{{ author['google_hindex'] }}</b></li>{% endif %}
+{% if author['ms_hindex']!=0 %}<li>H-index retrieved from Microsoft Academic: <b>{{ author['ms_hindex'] }}</b></li>{% endif %}
+{% if author['pagerank_collaborations']!=0 %}<li>Pagerank order based on collaborations: <b>{{ author['pagerank_collaborations'] }} / {{ author['totAuthors']}}</b></li>{% endif %}
+{% if author['pagerank_citations']!=0 %}<li>Pagerank order based on citations: <b>{{ author['pagerank_citations'] }} / {{ author['totAuthors']}}</b></li>{% endif %}
+</ul>
+</div>
+<div>
+</div>
+</div>
+<!--icon description block-->
+<div class="phone_email">
+<h3>Topic Evolution</h3>
+     <img src="{{url_for('static',filename='plot_topic_author.png')}}?{{ author['random_number'] }}" alt="Topic Evolution" style="width: 100%"/>
+	 <p>{% for topic in author['topics'] %}
+	 <span>{{topic['id']}} : {{topic['name']}}</span>
+	 {% endfor %}</p>
+</div>
+
+<div class="reviews">
+<!--reviews-->
+{% if author['papers']|length > 0 %}
+<h4>{{author['papers']|length}} papers in total:</h4>
+<!--review-->
+{% for paper in author['papers'] %}
+<div class="rev">
+<div class="user">
+<!--user avatar-->
+<a href="/paper/{{ paper['id'] }}" class="user_avatars">
+<div class="user_go">
+<i class="fa fa-link"></i>
+</div>
+<img src="../img/avatar/ava_3.jpg" alt=""></a>
+</div>
+<div class="texts">
+<div class="head_rev"><a href="/paper/{{ paper['id'] }}">{{ paper['title'] }}</a> <span>{{ paper['year'] }}</span></div>
+</div>
+</div>
+{% endfor %}
+{% endif %}
+<!--review end-->
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!--
+#################################
+- SCRIPT FILES -
+#################################
+-->
+<!--Google maps API linl-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../js/jquery.min.js"></script>
+<!--scroll animate block-->
+<script src="../js/wow.min.js"></script>
+<!--Other main scripts-->
+<script src="../js/all_scr.js"></script>
+<!--Flickr-->
+<script src="../js/jflickrfeed.js"></script>
+<!--Bootstrap js-->  
+<script src="../js/bootstrap.min.js"></script>
+<!--Map js-->
+<script type="text/javascript" src="../js/map_place.js"></script>
+<script type="text/javascript" src="../js/infobox.js"></script>
+<!--Slider Revolution-->
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="../rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!--Parallax-->
+<script type="text/javascript" src="../js/jquery.parallax-0.2-min.js"></script>
+<!--Parallax bg-->
+<script type="text/javascript">
+   "use strict";
+$('#inb').parallax({
+'elements': [
+{
+'selector': '#inb',
+'properties': {
+'x': {
+'background-position-x': {
+'initial': 0,
+'multiplier': 0.03,
+'invert': true
+}
+},
+'y': {
+'background-position-y': {
+'initial': 30,
+'multiplier': 0.03,
+'invert': true
+}
+}
+}
+}
+]
+});
+</script>
+<!--Flickr widget-->
+<script type="text/javascript">
+   "use strict";
+$('#basicuse').jflickrfeed({
+limit: 6,
+qstrings: {
+id: '52617155@N08'
+},
+itemTemplate: 
+'<li>' +
+'<a href="{{image_b}}"><img src="{{image_m}}" alt="{{title}}" /></a>' +
+'</li>'
+});
+</script>
+</body>
+</html>
